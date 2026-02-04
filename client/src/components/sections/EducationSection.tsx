@@ -1,80 +1,60 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
-/**
- * Design: Technical Blueprint - Education with university and training sections
- * Glass cards with neon accents
- */
+const education = [
+  {
+    school: "Sudan University of Science and Technology",
+    degree: "Information Technology",
+    period: "Feb 2015 - Oct 2018"
+  },
+  {
+    school: "CompTIA Linux+",
+    degree: "Certification",
+    period: "Dec 2019"
+  },
+  {
+    school: "CompTIA Security+",
+    degree: "Certification",
+    period: "Nov 2019"
+  },
+  {
+    school: "Cloud and Cyber Security, Microsoft Azure",
+    degree: "Certification",
+    period: "May 2019 - Jul 2019"
+  },
+  {
+    school: "Cisco - CCNA",
+    degree: "Certification",
+    period: "Aug 2018 - Sep 2018"
+  },
+  {
+    school: "Microsoft MCSA",
+    degree: "Certification",
+    period: "Mar 2018 - Apr 2018"
+  }
+];
 
-interface Education {
-  university: {
-    name: string;
-    field: string;
-    dates: string;
-  };
-  training: Array<{
-    provider: string;
-    name: string;
-    dates: string;
-  }>;
-}
-
-interface EducationSectionProps {
-  education: Education;
-}
-
-export default function EducationSection({ education }: EducationSectionProps) {
+export default function EducationSection() {
   return (
-    <section id="education" className="py-20 relative circuit-bg">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="section-number mr-4">04.</span>
-              <span className="text-[var(--tech-white)]">Education & Training</span>
-            </h2>
-            <div className="gradient-line w-32"></div>
-          </div>
+    <section id="education" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-4 mb-12">
+          <div className="text-blue-400 text-sm font-mono">04</div>
+          <h2 className="text-4xl font-bold text-white">Education & Training</h2>
+        </div>
 
-          {/* University */}
-          <div className="glass-card p-8 mb-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[var(--tech-neon)]/20 flex items-center justify-center flex-shrink-0">
-                <GraduationCap className="text-[var(--tech-neon)]" size={24} />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-[var(--tech-white)] mb-2">
-                  {education.university.name}
-                </h3>
-                <p className="text-[var(--tech-neon)] font-medium mb-1">
-                  {education.university.field}
-                </p>
-                <p className="text-sm text-[var(--tech-slate)] font-mono">
-                  {education.university.dates}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Training & Certifications */}
-          <div>
-            <h3 className="text-2xl font-bold text-[var(--tech-white)] mb-6 flex items-center gap-3">
-              <Award className="text-[var(--tech-neon)]" size={28} />
-              Certifications & Training
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {education.training.map((cert, index) => (
-                <div
-                  key={index}
-                  className="glass-card p-5 hover:scale-[1.02] transition-all duration-300"
-                >
-                  <h4 className="text-lg font-bold text-[var(--tech-white)] mb-2">{cert.name}</h4>
-                  <p className="text-[var(--tech-slate-light)] text-sm mb-1">{cert.provider}</p>
-                  <p className="text-xs text-[var(--tech-slate)] font-mono">{cert.dates}</p>
+        <div className="space-y-4">
+          {education.map((item, index) => (
+            <div key={index} className="glass-card glow-effect p-6 hover:border-blue-500/50 transition-colors">
+              <div className="flex items-start gap-4">
+                <GraduationCap className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white mb-1">{item.school}</h3>
+                  <p className="text-blue-400 text-sm mb-2">{item.degree}</p>
+                  <p className="text-gray-400 text-sm">{item.period}</p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

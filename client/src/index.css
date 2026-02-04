@@ -3,20 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
-Design Philosophy: Technical Blueprint Aesthetic
-- Swiss Design meets Technical Documentation
-- Precision, clarity, and technical authenticity
-- Colors: Navy (#0A192F), Neon Green (#64FFDA), Light Gray (#8892B0), White (#CCD6F6)
-- Typography: JetBrains Mono (display), Inter (body)
-- Elements: Circuit patterns, hexagonal grids, glowing connections
-*/
-
 @theme inline {
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 18px;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -41,65 +32,94 @@ Design Philosophy: Technical Blueprint Aesthetic
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 :root {
-  /* Technical Blueprint Color System */
-  --tech-navy: #0A192F;
-  --tech-navy-light: #112240;
-  --tech-navy-lighter: #1D3557;
-  --tech-slate: #8892B0;
-  --tech-slate-light: #A8B2D1;
-  --tech-white: #CCD6F6;
-  --tech-neon: #64FFDA;
-  --tech-neon-dim: rgba(100, 255, 218, 0.1);
-  --tech-neon-glow: rgba(100, 255, 218, 0.3);
-  
-  --radius: 8px;
-  --background: oklch(0.12 0.02 240);
-  --foreground: oklch(0.88 0.01 240);
-  --card: oklch(0.15 0.02 240);
-  --card-foreground: oklch(0.88 0.01 240);
-  --popover: oklch(0.15 0.02 240);
-  --popover-foreground: oklch(0.88 0.01 240);
-  --primary: oklch(0.82 0.12 175);
-  --primary-foreground: oklch(0.12 0.02 240);
-  --secondary: oklch(0.20 0.02 240);
-  --secondary-foreground: oklch(0.88 0.01 240);
-  --muted: oklch(0.18 0.02 240);
-  --muted-foreground: oklch(0.60 0.01 240);
-  --accent: oklch(0.82 0.12 175);
-  --accent-foreground: oklch(0.12 0.02 240);
+  --primary: oklch(0.6 0.2 259);
+  --primary-foreground: oklch(0.98 0.01 0);
+  --sidebar-primary: oklch(0.6 0.2 259);
+  --sidebar-primary-foreground: oklch(0.98 0.01 0);
+  --chart-1: oklch(0.6 0.2 259);
+  --chart-2: oklch(0.5 0.15 259);
+  --chart-3: oklch(0.55 0.18 259);
+  --chart-4: oklch(0.65 0.22 259);
+  --chart-5: oklch(0.7 0.25 259);
+  --radius: 0.75rem;
+  --background: oklch(0.08 0.01 0);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.12 0.02 259);
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.12 0.02 259);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.15 0.03 259);
+  --secondary-foreground: oklch(0.9 0.02 0);
+  --muted: oklch(0.25 0.04 259);
+  --muted-foreground: oklch(0.7 0.02 0);
+  --accent: oklch(0.6 0.2 259);
+  --accent-foreground: oklch(0.98 0.01 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.25 0.02 240);
-  --input: oklch(0.25 0.02 240);
-  --ring: oklch(0.82 0.12 175);
-  --chart-1: oklch(0.82 0.12 175);
-  --chart-2: oklch(0.70 0.10 175);
-  --chart-3: oklch(0.60 0.08 175);
-  --chart-4: oklch(0.50 0.06 175);
-  --chart-5: oklch(0.40 0.04 175);
+  --border: oklch(0.2 0.03 259);
+  --input: oklch(0.15 0.02 259);
+  --ring: oklch(0.6 0.2 259);
+  --sidebar: oklch(0.12 0.02 259);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.6 0.2 259);
+  --sidebar-accent-foreground: oklch(0.98 0.01 0);
+  --sidebar-border: oklch(0.2 0.03 259);
+  --sidebar-ring: oklch(0.6 0.2 259);
+}
+
+.dark {
+  --primary: oklch(0.6 0.2 259);
+  --primary-foreground: oklch(0.98 0.01 0);
+  --sidebar-primary: oklch(0.6 0.2 259);
+  --sidebar-primary-foreground: oklch(0.98 0.01 0);
+  --background: oklch(0.08 0.01 0);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.12 0.02 259);
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.12 0.02 259);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.15 0.03 259);
+  --secondary-foreground: oklch(0.9 0.02 0);
+  --muted: oklch(0.25 0.04 259);
+  --muted-foreground: oklch(0.7 0.02 0);
+  --accent: oklch(0.6 0.2 259);
+  --accent-foreground: oklch(0.98 0.01 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.2 0.03 259);
+  --input: oklch(0.15 0.02 259);
+  --ring: oklch(0.6 0.2 259);
+  --chart-1: oklch(0.6 0.2 259);
+  --chart-2: oklch(0.5 0.15 259);
+  --chart-3: oklch(0.55 0.18 259);
+  --chart-4: oklch(0.65 0.22 259);
+  --chart-5: oklch(0.7 0.25 259);
+  --sidebar: oklch(0.12 0.02 259);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.6 0.2 259);
+  --sidebar-accent-foreground: oklch(0.98 0.01 0);
+  --sidebar-border: oklch(0.2 0.03 259);
+  --sidebar-ring: oklch(0.6 0.2 259);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: var(--tech-navy);
-    color: var(--tech-white);
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-  
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -110,17 +130,6 @@ Design Philosophy: Technical Blueprint Aesthetic
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
-  }
-  
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Selection color */
-  ::selection {
-    background-color: var(--tech-neon-glow);
-    color: var(--tech-navy);
   }
 }
 
@@ -152,137 +161,42 @@ Design Philosophy: Technical Blueprint Aesthetic
       max-width: 1280px;
     }
   }
+
+  /* Realine Design System */
   
-  /* Glass Card Effect */
+  /* Glass card effect */
   .glass-card {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 18px;
-    transition: all 0.3s ease;
+    @apply relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   }
-  
-  .glass-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--tech-neon);
-    box-shadow: 0 0 20px var(--tech-neon-glow);
+
+  /* Gradient background */
+  .gradient-bg {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1a2e 100%);
   }
-  
-  /* Neon Glow Effect */
-  .neon-glow {
-    color: var(--tech-neon);
-    text-shadow: 0 0 10px var(--tech-neon-glow), 0 0 20px var(--tech-neon-glow);
+
+  /* Glow effect */
+  .glow-effect {
+    @apply relative;
   }
-  
-  .neon-border {
-    border-color: var(--tech-neon);
-    box-shadow: 0 0 10px var(--tech-neon-glow);
-  }
-  
-  /* Section Number Style */
-  .section-number {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--tech-neon);
-    letter-spacing: 0.1em;
-  }
-  
-  /* Diagonal Section */
-  .diagonal-section {
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    margin-top: -3rem;
-    padding-top: 6rem;
-  }
-  
-  /* Circuit Pattern Background */
-  .circuit-bg {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .circuit-bg::before {
+
+  .glow-effect::before {
     content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.05;
-    background-image: 
-      linear-gradient(90deg, var(--tech-neon) 1px, transparent 1px),
-      linear-gradient(0deg, var(--tech-neon) 1px, transparent 1px);
-    background-size: 40px 40px;
+    @apply absolute inset-0 rounded-2xl blur-2xl opacity-20;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
   }
-  
-  /* Hexagon Grid Pattern */
-  .hex-pattern {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hex-pattern::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.03;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%2364FFDA' stroke-width='1'/%3E%3C/svg%3E");
-    background-size: 60px 60px;
-  }
-  
-  /* Animated Gradient Line */
-  .gradient-line {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--tech-neon), transparent);
-    animation: shimmer 3s infinite;
-  }
-  
-  @keyframes shimmer {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-  }
-  
-  /* Timeline Connector */
-  .timeline-line {
-    position: relative;
-  }
-  
-  .timeline-line::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--tech-neon), transparent);
-  }
-  
-  /* Pulse Animation */
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 5px var(--tech-neon-glow);
-    }
-    50% {
-      box-shadow: 0 0 20px var(--tech-neon-glow), 0 0 30px var(--tech-neon-glow);
-    }
-  }
-  
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-}
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--tech-navy);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--tech-slate);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--tech-neon);
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a0aec0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
