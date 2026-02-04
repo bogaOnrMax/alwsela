@@ -1,0 +1,70 @@
+{
+  "summary": "Dedicated and experienced technician in low-current systems, IT support, smart home, and networking, with a strong passion for staying updated with the latest technologies. Proficient in a wide range of systems, with a proven track record of delivering exceptional technical support and solutions.",
+  "metrics": [
+    {"label":"Location","value":"Riyadh (Olaya)"},
+    {"label":"Scope","value":"IT • Low Current • Networking"},
+    {"label":"Languages","value":"Arabic (Native) • English (Average)"},
+    {"label":"Experience","value":"2017–Now (multi-role)"}
+  ],
+  "experience": [
+    {"company":"Emdadat Alatta CO.","role":"IT Engineer & Low Current Engineer","dates":"Feb 2024 | Right Now","bullets":[]},
+    {"company":"IT Shield Security","role":"Site Engineering & Low Current Systems","dates":"Oct 2023 | Feb 2024","bullets":[]},
+    {"company":"Shumookh Group LTD","role":"Network , Low Current Engineer","dates":"Oct 2022 | Oct 2023","bullets":[
+      "Lead network and low current projects, ensuring seamless communication and security.",
+      "Collaborate with cross-functional teams to design and implement cutting-edge solutions."
+    ]},
+    {"company":"Alsadeg System Security","role":"Technical support & Low Current Systems","dates":"Jul 2022 | Sep 2022","bullets":[
+      "Delivered exceptional technical support, maintaining high client satisfaction.",
+      "Implemented security enhancements for low-current systems, enhancing protection."
+    ]},
+    {"company":"Zain Sudan","role":"Corporate Service","dates":"Oct 2019 | Sep 2021","bullets":[
+      "Played a pivotal role in corporate service delivery, ensuring smooth IT operations.",
+      "Collaborated with teams to optimize network performance and resolve issues."
+    ]},
+    {"company":"CC Cantrol","role":"Low Current Systems","dates":"May 2019 | Oct 2019","bullets":[
+      "Specializing in low-current system installation and configuration.",
+      "Provided training and guidance to end-users for effective system utilization."
+    ]},
+    {"company":"RITTAL Technology","role":"Low Current Systems & Technical support","dates":"Dec 2019 | Mar2019","bullets":[
+      "Gained valuable experience in low-current system maintenance.",
+      "Contributed to system upgrades and improvements."
+    ]},
+    {"company":"Security & Communication Equipment","role":"Low Current Systems & Network","dates":"Dec 2017 | Dec 2018","bullets":[]}
+  ],
+  "skills": [
+    {"group":"Technical Support & Operations","items":[
+      "Ticket/call/email intake and logging",
+      "User guidance and training",
+      "Business follow-up aligned with SLAs",
+      "Updates and preventive maintenance"
+    ]},
+    {"group":"Troubleshooting & Problem Solving","items":[
+      "Problem assessment and root-cause diagnosis",
+      "Implement fixes and configuration adjustments",
+      "Software installation/configuration/maintenance",
+      "Hardware installation and fault repair"
+    ]},
+    {"group":"Security & Compliance","items":[
+      "Adherence to security standards",
+      "Information security counseling",
+      "Emergency response for critical incidents"
+    ]},
+    {"group":"Documentation & Collaboration","items":[
+      "Case documentation and reporting",
+      "Periodic support performance reports",
+      "Cross-team collaboration (software/network teams)",
+      "Continuous learning and upskilling"
+    ]}
+  ],
+  "education": {
+    "university": {"name":"Sudan University of Science and Technology","field":"Information Technology","dates":"Feb 2015 | Oct 2018"},
+    "training": [
+      {"provider":"Abad Network For Training - KSA","name":"CompTIA Linux+","dates":"Dec2019 | Des2019"},
+      {"provider":"Abad Network For Training - KSA","name":"CompTIA Security+","dates":"Nov 2019 | Nov 2019"},
+      {"provider":"Networkat Academy - Egypt","name":"Cloud and Cyber Security, Microsoft Azure","dates":"May 2019 | Jul 2019"},
+      {"provider":"Zoom Institute of Technology - india","name":"Cisco - CCNA","dates":"Aug 2018 | Sep 2018"},
+      {"provider":"KYM Technology Training Center - Sudan","name":"Microsoft MCSA","dates":"Mar 2018 | Apr 2018"},
+      {"provider":"KYM Technology Training Center - Sudan","name":"Low current & CCTV","dates":"Dec 2017 | Jan 2018"}
+    ]
+  }
+}

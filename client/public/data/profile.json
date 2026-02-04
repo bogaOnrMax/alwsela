@@ -1,0 +1,19 @@
+{
+  "name_display": "ABDALBAGI .F ALWSELA",
+  "name_full": "Abdalbagi Fadlalla Alwsela Osman",
+  "title": "TELECOMMUNICATIONS AND NETWORK ENGINEER",
+  "location": "Riyadh - Olaya",
+  "nationality": "Sudan",
+  "dob": "Oct 18th, 1998",
+  "languages": [
+    {"name":"Arabic","level":"Native language"},
+    {"name":"English","level":"Average experience"}
+  ],
+  "contact": {
+    "email": "A.alwsela@Yahoo.com",
+    "phone": "+(966)503442003",
+    "mobile": "+(249)903442003",
+    "linkedin": "Abdalbagi Alwsela",
+    "github": "One-5G"
+  }
+}
